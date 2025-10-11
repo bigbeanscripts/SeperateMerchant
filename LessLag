@@ -10,8 +10,7 @@ local Window = Library:Window{
     TabWidth = 160,
     Size =  UDim2.fromOffset(580, 460),
     Resize = false, 
-    Acrylic = true,
-    Theme = "Vynixu",
+    Theme = "Darker",
     MinimizeKey = Enum.KeyCode.LeftShift
 }
 
@@ -36,7 +35,7 @@ local function getAllItems()
     local allItems = {}
     local slotItemMap = {} -- Track items by slot and title to avoid duplicates
     
-    local merchantNames = {"Mining Merchant", "City Merchant"}
+    local merchantNames = {"Halloween Merchant"}
     
     for _, merchantName in ipairs(merchantNames) do
         local merchantData = LimitedMerchant[merchantName]
@@ -92,7 +91,7 @@ local function getLiveStockData()
     
     if replica and replica.Data and replica.Data.LimitedMerchant then
         -- Get data for both Frozen Merchant and Frontman Merchant
-        local merchantNames = {"Mining Merchant", "City Merchant"}
+        local merchantNames = {"Halloween Merchant"}
 
         for _, merchantName in ipairs(merchantNames) do
             local merchantData = replica.Data.LimitedMerchant[merchantName]
