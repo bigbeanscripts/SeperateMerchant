@@ -35,7 +35,7 @@ local function getAllItems()
     local allItems = {}
     local slotItemMap = {} -- Track items by slot and title to avoid duplicates
     
-    local merchantNames = {"Halloween Merchant", "Carnival Merchant"}
+    local merchantNames = {"Elf Merchant"}
     
     for _, merchantName in ipairs(merchantNames) do
         local merchantData = LimitedMerchant[merchantName]
@@ -91,7 +91,7 @@ local function getLiveStockData()
     
     if replica and replica.Data and replica.Data.LimitedMerchant then
         -- Get data for both Frozen Merchant and Frontman Merchant
-        local merchantNames = {"Halloween Merchant", "Carnival Merchant"}
+        local merchantNames = {"Elf Merchant"}
 
         for _, merchantName in ipairs(merchantNames) do
             local merchantData = replica.Data.LimitedMerchant[merchantName]
